@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= full_title(yield(:title)) %></title>
+    <title><%=yield(:title)%>ページ</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  <header>
+  <%
+=begin%>
+ <header>
     <div class="container">
       <%= link_to "トップページへ", "top",id:"logo" %>
       <nav>
@@ -22,7 +23,9 @@
         </ul>
       </nav>
     </div>  
-  </header>
+  </header> 
+<%
+=end%>
     <div>
       <%= yield %>  
     </div>
