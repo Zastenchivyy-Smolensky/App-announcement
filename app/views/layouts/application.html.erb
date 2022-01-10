@@ -8,27 +8,15 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-
   </head>
 
   <body>
-  
- <header>
-    <div class="container">
-      <%= link_to "トップページへ", "top",id:"logo" %>
-      <nav>
-        <ul class="nav navbar-nav navbar-right" > 
-          <li><%= link_to "ユーザー登録画面ヘ", "singup" %></li>
-          <li><%= link_to "詳細ページへ", "about" %></li>
-          <li><%= link_to "Log in ページへ", "login" %></li>
-        </ul>
-      </nav>
-    </div>  
-  </header> 
+  <%= render "layouts/header" %>
+ 
 
-    <div>
+    <div class="container">
       <%= yield %>  
     </div>
-    
+    <%= render "layouts/footer" %>
   </body>
 </html>

@@ -2,14 +2,20 @@ require "test_helper"
 
 class ShowControllerTest < ActionDispatch::IntegrationTest
   test "should get top" do
-    get show_top_url
+    get root_path
     assert_response :success
     assert_select "title","ページ"
   end
   
 
   test "should get about" do
-    get show_about_url
+    get about_path
+    
+    assert_response :success
+    assert_select "title","ページ"
+  end
+  test "should get contact" do
+    get contact_path
     assert_response :success
     assert_select "title","ページ"
   end

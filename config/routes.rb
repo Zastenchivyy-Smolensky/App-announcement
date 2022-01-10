@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root "show#top"
-  get "show/top"
-  get "show/about"
-
+  get "about", to:"show#about"
+  get "contact", to:"show#contact"
 
 end
