@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   get "about", to:"show#about"
   get "contact", to:"show#contact"
   get "/signup", to:"user#new"
+  resources :user
+
+  
 end
